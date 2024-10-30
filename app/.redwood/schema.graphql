@@ -1,0 +1,97 @@
+"""
+Use to check whether or not a user is authenticated and is associated
+with an optional set of roles.
+"""
+directive @requireAuth(roles: [String]) on FIELD_DEFINITION
+
+"""Use to skip authentication checks and allow public access."""
+directive @skipAuth on FIELD_DEFINITION
+
+scalar BigInt
+
+type BlogContent {
+  content: String!
+  createdAt: DateTime!
+  head: String!
+  id: Int!
+  link: String!
+}
+
+scalar Byte
+
+input CreateBlogContentInput {
+  content: String!
+  head: String!
+  link: String!
+}
+
+input CreatePostInput {
+  body: String!
+  title: String!
+}
+
+scalar Date
+
+scalar DateTime
+
+scalar File
+
+scalar JSON
+
+scalar JSONObject
+
+type Mutation {
+  createBlogContent(input: CreateBlogContentInput!): BlogContent!
+  createPost(input: CreatePostInput!): Post!
+  deleteBlogContent(id: Int!): BlogContent!
+  deletePost(id: Int!): Post!
+  updateBlogContent(id: Int!, input: UpdateBlogContentInput!): BlogContent!
+  updatePost(id: Int!, input: UpdatePostInput!): Post!
+}
+
+type Post {
+  body: String!
+  createdAt: DateTime!
+  id: Int!
+  title: String!
+}
+
+"""About the Redwood queries."""
+type Query {
+  blogContent(id: Int!): BlogContent
+  blogContents: [BlogContent!]!
+  post(id: Int!): Post
+  posts: [Post!]!
+
+  """Fetches the Redwood root schema."""
+  redwood: Redwood
+}
+
+"""
+The RedwoodJS Root Schema
+
+Defines details about RedwoodJS such as the current user and version information.
+"""
+type Redwood {
+  """The current user."""
+  currentUser: JSON
+
+  """The version of Prisma."""
+  prismaVersion: String
+
+  """The version of Redwood."""
+  version: String
+}
+
+scalar Time
+
+input UpdateBlogContentInput {
+  content: String
+  head: String
+  link: String
+}
+
+input UpdatePostInput {
+  body: String
+  title: String
+}

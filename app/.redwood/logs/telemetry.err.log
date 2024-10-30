@@ -1,0 +1,58 @@
+Starting log:
+ - Time: 2024-10-30T06:52:18.409Z
+ - Name: telemetry (telemetry)
+ - Command: yarn
+ - Arguments: node /Users/jy/work/123/app/node_modules/@redwoodjs/cli/dist/telemetry/send.js
+
+Encountered:
+OTLPExporterError
+    at IncomingMessage.<anonymous> (/Users/jy/work/123/app/node_modules/@opentelemetry/otlp-exporter-base/build/src/platform/node/util.js:103:39)
+    at IncomingMessage.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  data: 'error code: 526',
+  code: 526
+}
+while exporting the following spans:
+[
+  {
+    attributes: { command: 'dev', side: '["api","web"]', generate: true },
+    links: [],
+    events: [],
+    _droppedAttributesCount: 0,
+    _droppedEventsCount: 0,
+    _droppedLinksCount: 0,
+    status: { code: 1 },
+    endTime: [ 1730271138, 408102583 ],
+    _ended: true,
+    _duration: [ 0, 159102583 ],
+    name: 'cli',
+    _spanContext: {
+      traceId: '5b27d9678ec03876e74f2e65306398b3',
+      spanId: '060f841fee837a95',
+      traceFlags: 1
+    },
+    kind: 0,
+    _performanceStartTime: 157.5815,
+    _performanceOffset: -0.450439453125,
+    _startTimeProvided: false,
+    startTime: [ 1730271138, 249000000 ],
+    resource: Resource {
+      _attributes: [Object],
+      asyncAttributesPending: false,
+      _syncAttributes: [Object],
+      _asyncAttributesPromise: undefined
+    },
+    instrumentationLibrary: { name: 'redwoodjs' },
+    _spanLimits: {
+      attributeValueLengthLimit: null,
+      attributeCountLimit: 128,
+      linkCountLimit: 128,
+      eventCountLimit: 128,
+      attributePerEventCountLimit: 128,
+      attributePerLinkCountLimit: 128
+    },
+    _attributeValueLengthLimit: null,
+    spanContext: [Function (anonymous)]
+  }
+]

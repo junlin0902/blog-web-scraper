@@ -1,0 +1,18 @@
+{
+  "version": 3,
+  "sources": [
+    "../../../web/src/pages/FatalErrorPage/FatalErrorPage.tsx",
+    "../../../web/src/pages/NotFoundPage/NotFoundPage.tsx",
+    "../../../web/src/pages/BlogContent/BlogContentPage/BlogContentPage.tsx",
+    "../../../web/src/pages/BlogContent/BlogContentsPage/BlogContentsPage.tsx",
+    "../../../web/src/pages/BlogContent/EditBlogContentPage/EditBlogContentPage.tsx",
+    "../../../web/src/pages/BlogContent/NewBlogContentPage/NewBlogContentPage.tsx",
+    "../../../web/src/pages/Post/EditPostPage/EditPostPage.tsx",
+    "../../../web/src/pages/Post/NewPostPage/NewPostPage.tsx",
+    "../../../web/src/pages/Post/PostPage/PostPage.tsx",
+    "../../../web/src/pages/Post/PostsPage/PostsPage.tsx"
+  ],
+  "names": [],
+  "mappings": ";;;;;;;;;;;;;;AAYA;ACZA;ACMA;ACJA;ACIA;ACJA;ACIA;ACJA;ACIA;ACJA",
+  "file": "web-routesPages.d.ts"
+}

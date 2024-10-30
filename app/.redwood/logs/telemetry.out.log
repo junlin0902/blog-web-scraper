@@ -1,0 +1,17 @@
+Starting log:
+ - Time: 2024-10-30T06:52:18.409Z
+ - Name: telemetry (telemetry)
+ - Command: yarn
+ - Arguments: node /Users/jy/work/123/app/node_modules/@redwoodjs/cli/dist/telemetry/send.js
+
+You can disable telemetry by:
+ - setting the 'REDWOOD_DISABLE_TELEMETRY' environment variable
+ - passing the '--no-telemetry' flag when using the CLI
+Information about Redwood telemetry can be found at:
+ - https://telemetry.redwoodjs.com
+
+Computed resource information: 417.728ms
+Sending telemetry data to 'https://quark.quantumparticle.io/v1/traces'
+Sending data from telemetry file '1730271138248.json'
+Keeping the lastest 8 telemetry files for visibility/transparency.
+Removing telemetry file '_1730259920566.json'

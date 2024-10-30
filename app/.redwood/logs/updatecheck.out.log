@@ -1,0 +1,17 @@
+Starting log:
+ - Time: 2024-10-30T03:39:17.178Z
+ - Name: updateCheck (updatecheck)
+ - Command: yarn
+ - Arguments: node /Users/jy/work/blog-web_scraper/node_modules/@redwoodjs/cli/dist/lib/updateCheckExecute.js
+
+Detected the current version of RedwoodJS: '8.4.0'
+Checking for new versions for npm tag: 'latest'
+Detected the latest versions of RedwoodJS as:
+[
+  [
+    "latest",
+    "8.4.0"
+  ]
+]
+Saving updated version information for future checks...
+Update Check: 398.474ms

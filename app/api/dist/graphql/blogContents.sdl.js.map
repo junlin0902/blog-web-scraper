@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/graphql/blogContents.sdl.ts"],
+  "sourcesContent": ["export const schema = gql`\n  type BlogContent {\n    id: Int!\n    head: String!\n    content: String!\n    link: String!\n    createdAt: DateTime!\n  }\n\n  type Query {\n    blogContents: [BlogContent!]! @requireAuth\n    blogContent(id: Int!): BlogContent @requireAuth\n  }\n\n  input CreateBlogContentInput {\n    head: String!\n    content: String!\n    link: String!\n  }\n\n  input UpdateBlogContentInput {\n    head: String\n    content: String\n    link: String\n  }\n\n  type Mutation {\n    createBlogContent(input: CreateBlogContentInput!): BlogContent! @requireAuth\n    updateBlogContent(id: Int!, input: UpdateBlogContentInput!): BlogContent!\n      @requireAuth\n    deleteBlogContent(id: Int!): BlogContent! @requireAuth\n  }\n`\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;yBAAyB;AAAlB,MAAMA,SAASC,mBAAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "names": ["schema", "gql"]
+}
