@@ -21,7 +21,7 @@ https://www.coinbase.com/en-ca/blog
 Make sure you have the following installed:
 
 - **Node.js** (v20)
-- **Yarn** (latest version)
+- **Yarn** (4.5.1)
 - **Git**
 
 ---
