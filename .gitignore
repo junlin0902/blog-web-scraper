@@ -1,2 +1,4 @@
 .DS_Store
 app/.redwood/*
+app/api/db/dev.db
+scraper/dist/*
